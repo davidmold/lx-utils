@@ -1,4 +1,4 @@
-# lx-utils
+# lantix-utils
 
 ## Installation
 ```
@@ -8,7 +8,7 @@ No dependencies.
 
 ## Usage
 ```
-import { waitfor } from 'lx-utils'
+import { waitfor } from 'lantix-utils'
 
 async function test() {
   await waitfor(300)
