@@ -4,6 +4,7 @@
 ```
 npm install github:davidmold/lx-utils
 ```
+No dependencies.
 
 ## Usage
 ```
