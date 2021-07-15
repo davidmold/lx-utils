@@ -2,7 +2,7 @@
 
 ## Installation
 ```
-npm install github:davidmold/lx-utils
+npm install lantix-utils
 ```
 No dependencies.
 
