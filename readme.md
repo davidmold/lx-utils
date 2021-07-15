@@ -2,7 +2,7 @@
 
 ## Installation
 ```
-npm install -D github:davidmold/lx-utils
+npm install github:davidmold/lx-utils
 ```
 
 ## Usage
