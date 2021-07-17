@@ -1,16 +1,20 @@
 {
   "name": "lantix-utils",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "essential js utilities",
   "homepage": "https://github.com/davidmold/lx-utils",
   "repository": "davidmold/lx-utils",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "emit-types": "npx typescript"
   },
   "keywords": [
     "waitfor"
   ],
   "author": "David Mold",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.3.5"
+  }
 }
