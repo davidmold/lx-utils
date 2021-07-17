@@ -5,7 +5,7 @@ export function getFileAsDataUrl(file: any): Promise<any>;
  * @param {number} [width] - The desired width to scale the image to
  * @param {string} [filename] - Name of the file e.g. myimage.jpg.
  */
-export function getDataUrlAsJpegFile(dataUrl: any, width?: number, filename?: string): Promise<any>;
+export function getDataUrlAsJpegFile(dataUrl?: string, width?: number, filename?: string): Promise<any>;
 /**
  * @param {string} [dataURI] - An image dataURI.
  * @param {string} [filename] - Name of the file e.g. myimage.gif.

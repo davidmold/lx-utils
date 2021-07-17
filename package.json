@@ -1,13 +1,14 @@
 {
   "name": "lantix-utils",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "essential js utilities",
   "homepage": "https://github.com/davidmold/lx-utils",
   "repository": "davidmold/lx-utils",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "emit-types": "npx typescript"
+    "emit-types": "npx typescript",
+    "publish": "npm publish"
   },
   "keywords": [
     "waitfor"
