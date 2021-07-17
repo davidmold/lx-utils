@@ -23,6 +23,11 @@ async function getFileAsDataUrl(file) {
   })
 }
 
+/**
+ * @param {string} [dataURI] - An image dataURI.
+ * @param {number} [width] - The desired width to scale the image to
+ * @param {string} [filename] - Name of the file e.g. myimage.jpg.
+ */
 async function getDataUrlAsJpegFile(dataUrl, width, filename) {
   const img = new Image()
   return new Promise((resolve, reject) => {
@@ -54,7 +59,10 @@ async function getDataUrlAsJpegFile(dataUrl, width, filename) {
 }
 
 
-
+/**
+ * @param {string} [dataURI] - An image dataURI.
+ * @param {string} [filename] - Name of the file e.g. myimage.gif.
+ */
 function getDataUrlAsGifFile(dataURI, filename) {
   let wh = dataURI.indexOf(',')
   let str = dataURI.slice(wh + 1)
