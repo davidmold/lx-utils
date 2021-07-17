@@ -1,3 +1,6 @@
+/**
+ * @param {number} [len] - time to wait in ms.
+ */
 function waitfor (len) {
   return new Promise((resolve, reject) => {
     try {
@@ -10,6 +13,9 @@ function waitfor (len) {
   })
 }
 
+/**
+ * @param {File} [file] - An image file.
+ */
 async function getFileAsDataUrl(file) {
   const reader = new FileReader()
   return new Promise((resolve, reject) => {

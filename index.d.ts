@@ -1,5 +1,11 @@
-export function waitfor(len: any): any;
-export function getFileAsDataUrl(file: any): Promise<any>;
+/**
+ * @param {number} [len] - time to wait in ms.
+ */
+export function waitfor(len?: number): any;
+/**
+ * @param {File} [file] - An image file.
+ */
+export function getFileAsDataUrl(file?: File): Promise<any>;
 /**
  * @param {string} [dataUrl] - An image dataURI.
  * @param {number} [width] - The desired width to scale the image to
