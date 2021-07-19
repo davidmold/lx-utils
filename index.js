@@ -86,10 +86,22 @@ function getDataUrlAsGifFile(dataURI, filename) {
   })
 }
 
+/**
+ * 
+ * @returns {string[]} short month names, all lower case
+ */
 function getMonths() {
   return ['jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec']
 }
 
+/**
+ * 
+ * @returns {string[]} the full month names starting with caps
+ */
+function getLongMonths() {
+  return ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+}
+
 module.exports = {
-  waitfor, getFileAsDataUrl, getDataUrlAsJpegFile, getDataUrlAsGifFile, getMonths
+  waitfor, getFileAsDataUrl, getDataUrlAsJpegFile, getDataUrlAsGifFile, getMonths, getLongMonths
 }

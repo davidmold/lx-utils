@@ -17,4 +17,13 @@ export function getDataUrlAsJpegFile(dataUrl?: string, width?: number, filename?
  * @param {string} [filename] - Name of the file e.g. myimage.gif.
  */
 export function getDataUrlAsGifFile(dataURI?: string, filename?: string): File;
+/**
+ *
+ * @returns {string[]} short month names, all lower case
+ */
 export function getMonths(): string[];
+/**
+ *
+ * @returns {string[]} the full month names starting with caps
+ */
+export function getLongMonths(): string[];
