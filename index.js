@@ -106,7 +106,7 @@ async function keepTrying(fn, times, waitduration) {
       return await fn()
     }
     catch(err) {
-      console.log(chalk.red('failed'))
+      console.log('keepTrying failed', cnt)
     }
     await waitfor(5000)
     cnt++
