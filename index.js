@@ -88,6 +88,33 @@ function getDataUrlAsGifFile(dataURI, filename) {
 
 /**
  * 
+ * @param {function} fn function to keep calling 
+ * @param {number} [times] number of times to try before giving up - default 3 if zero or not present.
+ * @param {waitduration} [waitduration] how long to wait before retry in ms. Default 5000 if zero or not present.
+ * @returns 
+ */
+async function keepTrying(fn, times, waitduration) {
+  let cnt = 0
+  if(!waitduration){
+    waitduration = 5000
+  }
+  if(!times) {
+    times = 3
+  }
+  while(cnt < times) {
+    try {
+      return await fn()
+    }
+    catch(err) {
+      console.log(chalk.red('failed'))
+    }
+    await waitfor(5000)
+    cnt++
+  }
+  throw('tried ' + cnt + ' times and failed')
+}
+/**
+ * 
  * @returns {string[]} short month names, all lower case
  */
 function getMonths() {
@@ -103,5 +130,5 @@ function getLongMonths() {
 }
 
 module.exports = {
-  waitfor, getFileAsDataUrl, getDataUrlAsJpegFile, getDataUrlAsGifFile, getMonths, getLongMonths
+  waitfor, getFileAsDataUrl, getDataUrlAsJpegFile, getDataUrlAsGifFile, getMonths, getLongMonths, keepTrying
 }

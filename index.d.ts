@@ -27,3 +27,11 @@ export function getMonths(): string[];
  * @returns {string[]} the full month names starting with caps
  */
 export function getLongMonths(): string[];
+/**
+ *
+ * @param {function} fn function to keep calling
+ * @param {number} [times] number of times to try before giving up - default 3 if zero or not present.
+ * @param {waitduration} [waitduration] how long to wait before retry in ms. Default 5000 if zero or not present.
+ * @returns
+ */
+export function keepTrying(fn: Function, times?: number, waitduration?: any): Promise<any>;
