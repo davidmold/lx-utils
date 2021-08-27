@@ -129,6 +129,19 @@ function getLongMonths() {
   return ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
 }
 
+/**
+ * 
+ * @param {string} email 
+ * @returns {boolean} if the email address is valid
+ */
+function validEmail(email) {
+  if(!email) {
+    return false
+  }
+  const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(String(email).toLowerCase());
+}
+
 module.exports = {
-  waitfor, getFileAsDataUrl, getDataUrlAsJpegFile, getDataUrlAsGifFile, getMonths, getLongMonths, keepTrying
+  waitfor, getFileAsDataUrl, getDataUrlAsJpegFile, getDataUrlAsGifFile, getMonths, getLongMonths, keepTrying, validEmail
 }

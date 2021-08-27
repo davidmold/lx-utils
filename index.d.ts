@@ -35,3 +35,9 @@ export function getLongMonths(): string[];
  * @returns
  */
 export function keepTrying(fn: Function, times?: number, waitduration?: any): Promise<any>;
+/**
+ *
+ * @param {string} email
+ * @returns {boolean} if the email address is valid
+ */
+export function validEmail(email: string): boolean;
